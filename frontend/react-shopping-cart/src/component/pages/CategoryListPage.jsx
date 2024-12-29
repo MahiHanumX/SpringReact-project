@@ -12,8 +12,7 @@ const CategoryListPage = () => {
         fetchCategories();
     }, []);
 
-
-
+    
 
     const fetchCategories = async () => {
         try {
@@ -38,13 +37,14 @@ const CategoryListPage = () => {
             ):(
                 <div>
                     <h2>Categories</h2>
-                    <ul>
+                    <h1>{categories.name}</h1>
+                     <ul>
                         {categories.map((category)=>(
                             <li key={category.id}>
                                 <button onClick={()=> handleCategoryClick(category.id)}>{category.name}</button>
                             </li>
                         ))}
-                    </ul>
+                    </ul> 
                 </div>
             )}
         </div>
